@@ -1,345 +1,304 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2568325176938053');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2568325176938053&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Official Worli Matka</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#241800">
+<meta name="description" content="Worli App - official app download page">
+<title>Worli App - Download</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  background:linear-gradient(135deg,#0e1f1c,#16302b,#1a2c22);
-  color:#fff;
+    min-height:100vh;
+    font-family:Arial,Helvetica,sans-serif;
+    background:
+      radial-gradient(circle at 50% 10%,rgba(255,210,70,.18),transparent 28%),
+      linear-gradient(145deg,#100b02,#332300 45%,#171003);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    padding:14px 10px;
 }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:25px;
+.page{
+    width:100%;
+    max-width:620px;
+    min-height:100vh;
+    border:1px solid rgba(255,204,55,.7);
+    border-radius:4px;
+    padding:28px 16px 24px;
+    background:linear-gradient(180deg,rgba(66,45,4,.72),rgba(22,14,2,.95));
+    box-shadow:0 0 35px rgba(255,193,35,.13);
+    position:relative;
+    overflow:hidden;
 }
 
-.hero{
-  text-align:center;
-  padding:60px 20px;
+.page:before,
+.page:after{
+    content:"";
+    position:absolute;
+    width:80px;
+    height:80px;
+    border:1px solid rgba(255,205,75,.65);
+    opacity:.7;
+}
+.page:before{
+    top:-42px;
+    left:-42px;
+    transform:rotate(45deg);
+}
+.page:after{
+    bottom:-42px;
+    right:-42px;
+    transform:rotate(45deg);
 }
 
 .logo{
-  width:100px;
-  height:100px;
-  border-radius:22px;
-  box-shadow:0 0 30px rgba(216,168,78,.35);
-  margin-bottom:18px;
-  object-fit:cover;
-  background:rgba(255,255,255,0.04);
+    width:105px;
+    height:105px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    border:4px solid #ffd95c;
+    background:radial-gradient(circle,#4b2500,#130b00);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:17px;
+    font-weight:900;
+    color:#ffd84f;
+    box-shadow:0 0 22px rgba(255,205,70,.5);
 }
 
-.badge{
-  display:inline-block;
-  padding:8px 18px;
-  background:#d8a84e;
-  color:#0e1f1c;
-  border-radius:40px;
-  font-weight:700;
-  margin-bottom:20px;
-  font-size:14px;
+.title{
+    text-align:center;
+    font-size:38px;
+    line-height:1.1;
+    font-weight:900;
+    margin-bottom:20px;
 }
 
-.hero h1{
-  font-size:55px;
-  font-weight:800;
-  color:#e6c26e;
-  margin-bottom:10px;
-}
+.title .gold{color:#ffd52f}
 
-.hero p{
-  font-size:20px;
-  color:#ddd;
-  margin-bottom:14px;
-  max-width:640px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-
-.download{
-  display:inline-block;
-  padding:18px 45px;
-  font-size:20px;
-  font-weight:700;
-  background:linear-gradient(to right,#e6c26e,#b8842a);
-  color:#0e1f1c;
-  border-radius:60px;
-  text-decoration:none;
-  transition:.4s;
-  box-shadow:0 15px 30px rgba(216,168,78,.30);
-}
-
-.download:hover{
-  transform:translateY(-4px);
-  box-shadow:0 20px 40px rgba(216,168,78,.5);
+.subtitle{
+    text-align:center;
+    font-size:16px;
+    color:#f7e7b0;
+    margin-bottom:20px;
 }
 
 .stats{
-  margin-top:45px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
+    width:100%;
+    border:2px solid #a87913;
+    border-radius:35px;
+    padding:14px 16px;
+    text-align:center;
+    font-size:21px;
+    font-weight:800;
+    color:#fff;
+    margin-bottom:18px;
+    background:rgba(36,22,2,.55);
 }
 
-.card{
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(216,168,78,.18);
-  border-radius:20px;
-  padding:28px;
-  transition:.3s;
+.trust{
+    border:2px solid #a87913;
+    border-radius:22px;
+    padding:18px 12px;
+    text-align:center;
+    font-size:20px;
+    font-weight:800;
+    margin-bottom:25px;
+    background:rgba(30,19,2,.58);
 }
 
-.card:hover{
-  transform:translateY(-8px);
-  border-color:#e6c26e;
+.instructions{
+    text-align:center;
+    font-size:20px;
+    line-height:1.5;
+    font-weight:700;
+    margin:18px 0 22px;
+    color:#fff;
 }
 
-.card h2{
-  font-size:34px;
-  color:#e6c26e;
-  margin-bottom:8px;
+.download{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    width:100%;
+    min-height:72px;
+    border-radius:40px;
+    border:2px solid #ffe37a;
+    background:linear-gradient(180deg,#f6d35b,#b88712);
+    color:#fff;
+    text-decoration:none;
+    font-size:26px;
+    font-weight:900;
+    box-shadow:0 7px 24px rgba(255,202,53,.28),inset 0 1px 0 #fff8bd;
+    transition:.2s ease;
+    margin-bottom:24px;
 }
 
-.card p{
-  color:#ddd;
-  line-height:1.6;
+.download:hover{
+    transform:translateY(-2px) scale(1.01);
+    box-shadow:0 10px 30px rgba(255,202,53,.4);
 }
 
-/* RESULTS TABLE */
-.results-section{
-  margin-top:70px;
-}
-.results-section h2{
-  text-align:center;
-  font-size:34px;
-  margin-bottom:30px;
-  color:#e6c26e;
+.download span{
+    font-size:30px;
 }
 
-.table-wrap{
-  max-width:950px;
-  margin:auto;
-  background:rgba(0,0,0,0.25);
-  border:1px solid rgba(216,168,78,0.3);
-  border-radius:15px;
-  overflow:hidden;
-  box-shadow:0 0 20px rgba(216,168,78,0.12);
-}
-
-table{
-  width:100%;
-  border-collapse:collapse;
-}
-
-th{
-  background:rgba(0,0,0,0.3);
-  color:#e6c26e;
-  padding:15px;
-  font-size:15px;
-  letter-spacing:0.04em;
-  border-bottom:2px solid rgba(216,168,78,0.4);
-  text-transform:uppercase;
-}
-
-td{
-  padding:14px;
-  text-align:center;
-  color:#f0ead8;
-  font-size:15px;
-  border-bottom:1px solid rgba(216,168,78,0.12);
-}
-
-tr:nth-child(even) td{ background:rgba(255,255,255,0.015); }
-
-tr:hover td{
-  background:rgba(216,168,78,0.06);
-  transition:0.3s;
-}
-
-.result-num{ font-weight:700; color:#7fd6b8; letter-spacing:0.05em; }
-.status-pending{ color:#c9c2ab; }
-.status-live{ color:#7fd6b8; }
-
-/* FEATURES */
 .features{
-  margin-top:70px;
-}
-
-.features h2{
-  text-align:center;
-  font-size:38px;
-  margin-bottom:40px;
-  color:#e6c26e;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+    border:2px solid #8d6815;
+    border-radius:22px;
+    padding:10px 18px;
+    background:rgba(20,13,2,.65);
+    margin-bottom:24px;
 }
 
 .feature{
-  background:rgba(255,255,255,0.03);
-  padding:30px;
-  border-radius:18px;
-  border:1px solid rgba(216,168,78,.12);
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:16px 4px;
+    border-bottom:1px solid rgba(255,214,91,.16);
+    font-size:17px;
+    font-weight:700;
 }
 
-.feature h3{
-  margin-bottom:15px;
-  color:#e6c26e;
+.feature:last-child{border-bottom:0}
+
+.icon{
+    color:#ffd32e;
+    font-size:22px;
+    min-width:25px;
+    text-align:center;
 }
 
-.feature p{
-  color:#ddd;
-  line-height:1.7;
-  font-size:14.5px;
-}
-
-.cta-bottom{
-  text-align:center;
-  margin-top:20px;
+.disclaimer{
+    border:1px solid #7b5b16;
+    border-radius:18px;
+    padding:18px 14px;
+    text-align:center;
+    color:#e6d7a8;
+    font-size:13px;
+    line-height:1.6;
+    background:rgba(30,20,4,.7);
 }
 
 .footer{
-  margin-top:70px;
-  text-align:center;
-  padding:25px;
-  color:#bbb;
-  border-top:1px solid rgba(216,168,78,.15);
-  font-size:13px;
-  line-height:1.8;
+    text-align:center;
+    color:#bda96e;
+    font-size:13px;
+    margin-top:22px;
 }
 
-@media(max-width:768px){
-  .hero h1{ font-size:38px; }
-  .hero p{ font-size:17px; }
-  .download{ font-size:18px; padding:16px 32px; }
-  th, td{ font-size:12.5px; padding:10px; }
+.footer strong{color:#ffd32f}
+
+@media(max-width:480px){
+    body{padding:0}
+    .page{
+        border-radius:0;
+        border-left:0;
+        border-right:0;
+        padding:24px 13px 20px;
+    }
+    .logo{width:88px;height:88px;font-size:14px}
+    .title{font-size:32px}
+    .stats{font-size:18px}
+    .trust{font-size:18px}
+    .instructions{font-size:18px}
+    .download{font-size:23px;min-height:65px}
+    .feature{font-size:15px}
 }
 </style>
 </head>
 
 <body>
+<main class="page">
 
-<div class="container">
+    <div class="logo">WORLI<br>APP</div>
 
-<section class="hero">
+    <h1 class="title">
+        <span class="gold">Worli</span> App
+    </h1>
 
-  <img src="applogo.png" class="logo" alt="Logo">
-   
-  <div class="badge">★ Trusted by 50,000+ Users</div>
+    <p class="subtitle">
+        Official App Download Page
+    </p>
 
-  <h1>Worli Mtaka App</h1>
+    <div class="stats">
+        👥 Easy &amp; Fast App Access
+    </div>
 
-  <p>The most trusted, fastest and most secure Matka platform in India. Play smart. Win big. Withdraw instantly.</p>
+    <div class="trust">
+        🏆 Simple • Secure • User Friendly
+    </div>
 
- <div class="cta-bottom">
+    <div class="instructions">
+        नीचे दिए गए बटन पर क्लिक करके<br>
+        एप्लिकेशन डाउनलोड करें 👇
+    </div>
+
+    <!-- Put your APK file in the same folder and name it app.apk -->
+    <a href="worlimtk.apk" class="download" download>
+    ⬇ Download APK
+    </a>
+        <span>⬇</span>
+        Download Now
+        <span>⬇</span>
+    </a>
+
+    <section class="features">
+        <div class="feature">
+            <span class="icon">⚡</span>
+            <span>Fast &amp; easy installation</span>
+        </div>
+        <div class="feature">
+            <span class="icon">🛡</span>
+            <span>Simple and user-friendly interface</span>
+        </div>
+        <div class="feature">
+            <span class="icon">📱</span>
+            <span>Optimized for Android devices</span>
+        </div>
+        <div class="feature">
+            <span class="icon">📊</span>
+            <span>App information and chart interface</span>
+        </div>
+        <div class="feature">
+            <span class="icon">🔔</span>
+            <span>Convenient in-app notifications</span>
+        </div>
+        <div class="feature">
+            <span class="icon">✓</span>
+            <span>Clean and easy navigation</span>
+        </div>
+    </section>
+
 <a href="worlimtk.apk" class="download" download>
     ⬇ Download APK
 </a>
-  </div>
+        <span>⬇</span>
+        Download Now
+        <span>⬇</span>
+    </a>
 
-  <div class="stats">
-    <div class="card">
-      <h2>50K+</h2>
-      <p>Active Users</p>
-    </div>
-    <div class="card">
-      <h2>24×7</h2>
-      <p>Automatic Result Updates</p>
-    </div>
-    <div class="card">
-      <h2>2 Sec</h2>
-      <p>Notification After Draw</p>
-    </div>
-  </div>
-
-</section>
-
-<section class="features">
-
-  <h2>Why We Choose Worli Matka</h2>
-
-  <div class="grid">
-
-    <div class="feature">
-      <h3>⚡ Instant Updates</h3>
-      <p>Results appear the second they're officially released by the state lottery department.</p>
+    <div class="disclaimer">
+        This page is provided only for app-download purposes.We Don't Support ILLEGAL GAMBLING and Money 
+        Please review the application's terms and applicable laws
+        before installing or using the application.
     </div>
 
-    <div class="feature">
-      <h3>🔔 Smart Notifications</h3>
-      <p>Save your usual draws and get notified automatically — no need to keep checking.</p>
+    <div class="footer">
+        © 2026 <strong>Worli App</strong> • All Rights Reserved
     </div>
 
-    <div class="feature">
-      <h3>📜 Full Archive</h3>
-      <p>Look up past draw results anytime, going back through the full result history.</p>
-    </div>
-
-    <div class="feature">
-      <h3>🔒 Safe & Independent</h3>
-      <p>We only display publicly published results. No payments, tickets, or accounts required.</p>
-    </div>
-
-    <div class="feature">
-      <h3>🎯 Easy to Use</h3>
-      <p>A clean, simple interface built around one job — showing you the result, fast.</p>
-    </div>
-
-    <div class="feature">
-      <h3>📱 Android APK</h3>
-      <p>Download the latest version directly, with lightweight, fast performance.</p>
-    </div>
-
-  </div>
-
-  <div class="cta-bottom">
-<a href="worlimtk.apk" class="download" download>
-    ⬇ Download APK
-</a>
-  </div>
-
-</section>
-
-<div class="footer">
-  © 2026 worli matka<br><br>
-  Independent results-lookup service. Not a lottery operator, retailer, or betting platform.<br>
-  Instant Updates • Full Archive • Trusted by 50K+ Users
-</div>
-
-</div>
-
+</main>
 </body>
 </html>
+
+    
